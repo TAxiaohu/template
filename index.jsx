@@ -1,17 +1,27 @@
-/*
- * @Author: 胡路杰
- * @Date: 2022-05-19 17:03:16
- * @Descripttion: 
- * @Company: YH
- */
-import React from "react";
+import { useState ,useEffect} from 'react';
+import PropTypes from 'prop-types';
+import './{{template}}.styl';
 
-const name = () => {
-  console.log(111)
-
-  return (
-    <div>123131</div>
-  )
+const {{ template }} = props => {
+  //  参数   方法
+  const [count, setCount] = useState(0);   
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+  return <div className="{{template}}">
+    {{ template }}
+    <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+  </div>
 }
 
-export default name
+{{template}}.defaultProps = {
+};
+
+{{template}}.propTypes = {
+};
+
+export default {{ template }}
