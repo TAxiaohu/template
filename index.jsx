@@ -74,7 +74,7 @@ const {{ template }} = props => {
   )
 }
 
-{ { template } }.defaultProps = {
+{{ template }}.defaultProps = {
   tableData: [],
   pagination: null,
   onSearch: null,
@@ -82,7 +82,7 @@ const {{ template }} = props => {
   onRefresh: null,
 }
 
-{ { template } }.propTypes = {
+{{ template }}.propTypes = {
   tableData: PropTypes.oneOfType([PropTypes.array]),
   pagination: PropTypes.oneOfType([PropTypes.object]),
   onSearch: PropTypes.func,
@@ -90,4 +90,4 @@ const {{ template }} = props => {
   onRefresh: PropTypes.func,
 }
 
-export default SearchHoc({ method: 'post', urlConfig: ['host', '/api'] })({{ template }})
+export default SearchHoc({ method: 'post', urlConfig: ['host', '/api'] })( {{ template }} )
