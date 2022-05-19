@@ -53,7 +53,6 @@ const {{ template }} = props => {
         <PageTable
           data={tableData}
           pagination={pagination}
-          onPreview={openTaskResult}
           onRemove={onRemove}
           onTableChange={onChange}
           onPreview={() => {
@@ -90,4 +89,4 @@ const {{ template }} = props => {
   onRefresh: PropTypes.func,
 }
 
-export default SearchHoc({ method: 'post', urlConfig: ['host', '/api'] })( {{ template }} )
+export default SearchHoc({ method: 'post', urlConfig: ['host', '/api'] })({{ template }})
